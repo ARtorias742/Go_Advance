@@ -1,0 +1,10 @@
+# Download the latest version (adjust the version number if needed)
+curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
+
+# Unzip and move files to /usr/local
+unzip protoc-21.12-linux-x86_64.zip -d $HOME/protobuf
+sudo mv $HOME/protobuf/bin/protoc /usr/local/bin/
+sudo mv $HOME/protobuf/include/* /usr/local/include/
+
+# Verify installation
+protoc --version
